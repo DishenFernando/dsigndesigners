@@ -1,0 +1,260 @@
+/* Global Reset & Base */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #6e8efb;
+  --secondary-color: #a777e3;
+  --accent-color: #f78da7;
+  --text-color: #333;
+  --text-light: #666;
+  --bg-light: #f9f9f9;
+  --white: #fff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--white);
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* FULL BROWSER WIDTH APPROACH */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* Remove max-width constraint to allow full browser width */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* FULL BROWSER WIDTH SECTIONS */
+section {
+  width: 100%;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  margin: 0;
+  /* Full browser width by default */
+}
+
+/* Container for content within full-width sections */
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* If you want truly edge-to-edge sections with no padding */
+.full-edge-section {
+  width: 100%;
+  padding: 80px 0;
+  margin: 0;
+}
+
+.full-edge-section .section-content {
+  padding: 0 20px;
+}
+
+/* Header/Navigation that spans full width */
+.full-width-header {
+  width: 100%;
+  padding: 20px;
+  background: var(--primary-color);
+  margin: 0;
+}
+
+.full-width-header .header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
+}
+
+/* Titles */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+/* Background sections that span full width */
+.bg-section {
+  width: 100%;
+  background: var(--bg-light);
+  padding: 80px 0;
+  margin: 0;
+}
+
+.bg-section.primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+}
+
+.bg-section.dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Mobile Responsive - Maintains full width */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+  }
+  
+  .full-edge-section {
+    padding: 60px 0;
+  }
+  
+  .full-edge-section .section-content {
+    padding: 0 15px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .full-width-header {
+    padding: 15px;
+  }
+  
+  .bg-section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 40px 10px;
+  }
+  
+  .full-edge-section .section-content {
+    padding: 0 10px;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .full-width-header {
+    padding: 10px;
+  }
+  
+  .bg-section {
+    padding: 40px 0;
+  }
+}
+
+/* Utility classes for full browser display */
+.w-full {
+  width: 100% !important;
+}
+
+.no-max-width {
+  max-width: none !important;
+}
+
+.edge-to-edge {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
